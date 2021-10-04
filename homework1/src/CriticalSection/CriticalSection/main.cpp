@@ -13,7 +13,11 @@ void ThreadFunction(void* pParams)
 	while(1)
 	{
 		EnterCriticalSection(&cs);
-		// ...
+		for (i = 0; i < 4; i++)
+		{
+			a[i] = n;
+		}
+		n++;
 		LeaveCriticalSection(&cs);
 	}
 }
